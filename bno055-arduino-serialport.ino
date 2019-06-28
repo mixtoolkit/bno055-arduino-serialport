@@ -41,6 +41,7 @@ void loop(void)
   Serial.print(",");
   Serial.print(AnalogPin2Value, DEC); 
   Serial.print(",");
+  
   send_IMU_Quaternion();
 //  Serial.print(",");
 //  send_Euler_degrees();  
@@ -175,4 +176,3 @@ void send_Gravity()
 //  Serial.print(" Z: ");
   Serial.print(gravity.z(), DEC);
 }
-
