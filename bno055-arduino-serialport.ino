@@ -18,7 +18,7 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55);
 
 int AnalogPin0 = A0; //Declare an integer variable, hooked up to analog pin 0
 int AnalogPin1 = A1; //Declare an integer variable, hooked up to analog pin 1
-
+int AnalogPin2 = A2; //Declare an integer variable, hooked up to analog pin 2
 void setup(void) 
 {
   Serial.begin(9600); //Begin Serial Communication with a baud rate of 9600  
@@ -31,14 +31,18 @@ void loop(void)
   int AnalogPin0Value = analogRead(AnalogPin0);
   int AnalogPin1Value = analogRead(AnalogPin1);
 //  int AnalogPin2Value = analogRead(AnalogPin2);
-//
+
+  // Light resistor
 //  Serial.print(AnalogPin0Value, DEC); 
 //  Serial.print(",");
+
+  
 //  Serial.print(AnalogPin1Value, DEC); 
 //  Serial.print(",");
 //  Serial.print(AnalogPin2Value, DEC); 
 //  Serial.print(",");
-  
+
+  // IMU sensor
   send_IMU_Quaternion(false);
 //  Serial.print(",");
 //  send_Euler_degrees();  
